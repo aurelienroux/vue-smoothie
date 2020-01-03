@@ -11,9 +11,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/add-smoothie',
+    name: 'addSmoothie',
+    component: () => import(/* webpackChunkName: "about" */ '../components/AddSmoothie.vue')
   }
 ]
 
