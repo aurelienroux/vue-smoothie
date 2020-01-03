@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home.vue'
+import EditSmoothie from '@/components/EditSmoothie'
 
 Vue.use(VueRouter)
 
@@ -12,8 +13,13 @@ const routes = [
   },
   {
     path: '/add-smoothie',
-    name: 'addSmoothie',
-    component: () => import(/* webpackChunkName: "about" */ '../components/AddSmoothie.vue')
+    name: 'AddSmoothie',
+    component: () => import('../components/AddSmoothie.vue')
+  },
+  {
+    path: '/edit-smoothie/:smoothie_slug',
+    name: 'EditSmoothie',
+    component: EditSmoothie
   }
 ]
 
